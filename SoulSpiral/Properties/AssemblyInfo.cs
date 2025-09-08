@@ -1,5 +1,5 @@
 ﻿// Soul Spiral
-// Copyright 2006-2012 Ben Lincoln
+// Copyright 2006-2023 Ben Lincoln
 // http://www.thelostworlds.net/
 //
 
@@ -30,7 +30,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Legacy of Kain: The Lost Worlds - https://www.thelostworlds.net/")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Copyright 2006-2018 Ben Lincoln")]
+[assembly: AssemblyCopyright("Copyright 2006-2023 Ben Lincoln")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -49,5 +49,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.11.*")]
-[assembly: AssemblyFileVersion("1.11.*")]
+[assembly: AssemblyVersion("1.18.*")]
+[assembly: AssemblyFileVersion("1.18.*")]

@@ -1,40 +1,19 @@
-// BenLincoln.TheLostWorlds.CDBigFile
-// Copyright 2006-2012 Ben Lincoln
-// http://www.thelostworlds.net/
-//
-
-// This file is part of BenLincoln.TheLostWorlds.CDBigFile.
-
-// BenLincoln.TheLostWorlds.CDBigFile is free software: you can redistribute it and/or modify
-// it under the terms of version 3 of the GNU General Public License as published by
-// the Free Software Foundation.
-
-// BenLincoln.TheLostWorlds.CDBigFile is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// You should have received a copy of the GNU General Public License
-// along with BenLincoln.TheLostWorlds.CDBigFile (in the file LICENSE.txt).  
-// If not, see <http://www.gnu.org/licenses/>.
-
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using BF = BenLincoln.TheLostWorlds.CDBigFile;
-using BLD = BenLincoln.Data;
 
 namespace BenLincoln.TheLostWorlds.CDBigFile
 {
     public class FileIndexWithSeparateHashes : BF.FileIndex
     {
-        protected string[] mHashes;
+        protected uint[] mHashes;
         protected int mHashOffset = 0;
 
         #region Properties
 
-        public string[] Hashes
+        public uint[] Hashes
         {
             get
             {
@@ -83,7 +62,7 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
 
         protected override void ReadEntries()
         {
-            string[] hashes;
+            uint[] hashes;
             uint[][] entries;
             FileStream iStream;
             BinaryReader iReader;
@@ -98,10 +77,10 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
                 int numEntries = iReader.ReadUInt16();
                 //proceed to read the rest of the index - 4 bytes past the length indicator
                 iStream.Seek(Offset + mFirstEntryOffset, SeekOrigin.Begin);
-                hashes = new string[numEntries];
+                hashes = new uint[numEntries];
                 for (int i = 0; i < numEntries; i++)
                 {
-                    hashes[i] = BLD.HexConverter.ByteArrayToHexString(BLD.BinaryConverter.UIntToByteArray(iReader.ReadUInt32()));
+                    hashes[i] = iReader.ReadUInt32();
                 }
 
                 entries = new uint[numEntries][];

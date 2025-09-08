@@ -1,24 +1,4 @@
-﻿// BenLincoln.TheLostWorlds.CDBigFile
-// Copyright 2006-2018 Ben Lincoln
-// https://www.thelostworlds.net/
-//
-
-// This file is part of BenLincoln.TheLostWorlds.CDBigFile.
-
-// BenLincoln.TheLostWorlds.CDBigFile is free software: you can redistribute it and/or modify
-// it under the terms of version 3 of the GNU General Public License as published by
-// the Free Software Foundation.
-
-// BenLincoln.TheLostWorlds.CDBigFile is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// You should have received a copy of the GNU General Public License
-// along with BenLincoln.TheLostWorlds.CDBigFile (in the file LICENSE.txt).  
-// If not, see <http://www.gnu.org/licenses/>.
-
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -28,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("BenLincoln.TheLostWorlds.CDBigFile")]
 [assembly: AssemblyDescription("BigFile-Related Shared Library")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Legacy of Kain: The Lost Worlds - https://www.thelostworlds.net/")]
+[assembly: AssemblyCompany("Legacy of Kain: The Lost Worlds - http://www.thelostworlds.net/")]
 [assembly: AssemblyProduct("BenLincoln.TheLostWorlds.CDBigFile")]
-[assembly: AssemblyCopyright("Copyright 2006-2018 Ben Lincoln")]
+[assembly: AssemblyCopyright("Copyright 2006 Ben Lincoln")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -51,5 +31,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.5.*")]
-[assembly: AssemblyFileVersion("1.5.*")]
+[assembly: AssemblyVersion("1.1.*")]
+[assembly: AssemblyFileVersion("1.1.*")]

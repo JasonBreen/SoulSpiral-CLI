@@ -15,7 +15,7 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
             Name = "SoulReaverPC";
             Description = "Soul Reaver (PC)";
             MasterIndexType = IndexType.SR1PC;
-            HashLookupTable = HashLookupTable = new FlatFileHashLookupTable("SR1", Path.Combine(mDLLPath, "Hashes-SR1.txt"));
+            HashLookupTable = HashLookupTable = new FlatFileHashLookupTable("SR1", Path.Combine(mDLLPath, "Hashes-SR1-PC.txt"));
             FileTypes = new FileType[]
             {
                 BF.FileType.FromType(BF.FileType.FILE_TYPE_DRM_SR1_Object),

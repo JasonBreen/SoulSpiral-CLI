@@ -1,23 +1,42 @@
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\bin\Debug\SoulSpiral.exe.config
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\bin\Debug\SoulSpiral.exe
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\bin\Debug\SoulSpiral.pdb
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\bin\Debug\AndrewFradley.HexPanel.dll
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.dll
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\bin\Debug\BenLincoln.UI.dll
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\bin\Debug\BenLincoln.Data.dll
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.pdb
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\bin\Debug\AndrewFradley.HexPanel.pdb
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\bin\Debug\BenLincoln.UI.pdb
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\bin\Debug\BenLincoln.Data.pdb
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.csprojResolveAssemblyReference.cache
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.frmAbout.resources
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.frmHexEdit.resources
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.frmMain.resources
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.frmRecognizedBigfile.resources
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.frmSelectBigfileType.resources
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.Properties.Resources.resources
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.csproj.GenerateResource.cache
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.csproj.CoreCompileInputs.cache
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.csproj.CopyComplete
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.exe
-C:\Users\Andrew\source\repos\SoulSpiral-Official\SoulSpiral\obj\Debug\SoulSpiral.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\bin\Debug\SoulSpiral.exe
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\bin\Debug\SoulSpiral.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\bin\Debug\AndrewFradley.HexPanel.dll
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.dll
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\bin\Debug\BenLincoln.UI.dll
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\bin\Debug\BenLincoln.Data.dll
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\bin\Debug\AndrewFradley.HexPanel.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\bin\Debug\BenLincoln.UI.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\bin\Debug\BenLincoln.Data.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\obj\Debug\SoulSpiral.csprojResolveAssemblyReference.cache
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\obj\Debug\SoulSpiral.frmAbout.resources
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\obj\Debug\SoulSpiral.frmHexEdit.resources
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\obj\Debug\SoulSpiral.frmMain.resources
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\obj\Debug\SoulSpiral.frmRecognizedBigfile.resources
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\obj\Debug\SoulSpiral.frmSelectBigfileType.resources
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\obj\Debug\SoulSpiral.Properties.Resources.resources
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\obj\Debug\SoulSpiral.csproj.GenerateResource.Cache
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\obj\Debug\SoulSpiral.exe
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\obj\Debug\SoulSpiral.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\SoulSpiral\bin\Debug\SoulSpiral.exe.config
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\bin\Debug\SoulSpiral.exe.config
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\obj\Debug\SoulSpiral.exe
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\obj\Debug\SoulSpiral.pdb
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\bin\Debug\SoulSpiral.exe
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\bin\Debug\SoulSpiral.pdb
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\bin\Debug\AndrewFradley.HexPanel.dll
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.dll
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\bin\Debug\BenLincoln.UI.dll
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\bin\Debug\BenLincoln.Data.dll
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.pdb
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\bin\Debug\AndrewFradley.HexPanel.pdb
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\bin\Debug\BenLincoln.UI.pdb
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\bin\Debug\BenLincoln.Data.pdb
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\obj\Debug\SoulSpiral.csprojResolveAssemblyReference.cache
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\obj\Debug\SoulSpiral.frmAbout.resources
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\obj\Debug\SoulSpiral.frmHexEdit.resources
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\obj\Debug\SoulSpiral.frmMain.resources
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\obj\Debug\SoulSpiral.frmRecognizedBigfile.resources
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\obj\Debug\SoulSpiral.frmSelectBigfileType.resources
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\obj\Debug\SoulSpiral.Properties.Resources.resources
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\SoulSpiral\obj\Debug\SoulSpiral.csproj.GenerateResource.Cache

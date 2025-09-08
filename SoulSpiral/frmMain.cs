@@ -33,6 +33,7 @@ using BenLincoln.TheLostWorlds.CDBigFile;
 using BF = BenLincoln.TheLostWorlds.CDBigFile;
 using UI = BenLincoln.UI;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace SoulSpiral
 {
@@ -945,20 +946,27 @@ namespace SoulSpiral
             //dump the raw contents of the current index
             oWriter.WriteLine("Index Name, Entry Number, Values in Hex, Values in Dec");
             int entryNum = 0;
-            foreach (uint[] currentEntry in whichIndex.Entries)
+            if ((whichIndex.Entries == null) || (whichIndex.Entries.Length < 1))
             {
-                string info = whichIndex.Name + "," + entryNum + ",";
-                foreach (uint currentValue in currentEntry)
+                Console.WriteLine("Error: invalid index with zero entries");
+            }
+            else
+            {
+                foreach (uint[] currentEntry in whichIndex.Entries)
                 {
-                    info += string.Format("{0:X8},", currentValue);
+                    string info = whichIndex.Name + "," + entryNum + ",";
+                    foreach (uint currentValue in currentEntry)
+                    {
+                        info += string.Format("{0:X8},", currentValue);
+                    }
+                    info += " ,";
+                    foreach (uint currentValue in currentEntry)
+                    {
+                        info += string.Format("{0:000000000000},", currentValue);
+                    }
+                    oWriter.WriteLine(info);
+                    entryNum++;
                 }
-                info += " ,";
-                foreach (uint currentValue in currentEntry)
-                {
-                    info += string.Format("{0:000000000000},", currentValue);
-                }
-                oWriter.WriteLine(info);
-                entryNum++;
             }
 
             oWriter.Close();
@@ -971,6 +979,66 @@ namespace SoulSpiral
                 {
                     ExportIndexRecursive(nextIndex, targetPath);
                 }
+            }
+        }
+
+        protected void ExportUnknownBigfileData()
+        {
+            if (mBigFile.MasterIndex == null)
+            {
+                MessageBox.Show("This BigFile does not appear to have a valid master index.",
+                   "Export Error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error);
+                return;
+            }
+
+            SaveFileDialog sDialogue;
+            DialogResult result;
+
+            sDialogue = new SaveFileDialog();
+            sDialogue.AddExtension = true;
+            sDialogue.DefaultExt = "*.TXT";
+            sDialogue.Filter = "Text Files (*.TXT)|*.TXT";
+            sDialogue.OverwritePrompt = true;
+            sDialogue.Title = "Export Unknown Bigfile Data...";
+
+            result = sDialogue.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    //create the new output file
+                    FileStream oStream;
+                    StreamWriter oWriter;
+
+                    //open the file stream and enter the name of the current index
+                    oStream = new FileStream(sDialogue.FileName, FileMode.Create, FileAccess.Write);
+                    oWriter = new StreamWriter(oStream);
+
+                    oWriter.WriteLine(string.Format("Bigfile data for '{0}'", mBigFile.Path));
+                    oWriter.WriteLine();
+                    oWriter.WriteLine(mBigFile.GetInfo());
+                    oWriter.WriteLine();
+
+                    oWriter.Close();
+                    oStream.Close();
+
+                    ExportIndexRecursive(mBigFile.MasterIndex, sDialogue.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while exporting the index data.\r\n" +
+                        "The specific error message was:\r\n" + ex.Message,
+                        "Export Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+                MessageBox.Show("Export Complete",
+                    "Done",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
             }
         }
 
@@ -1071,6 +1139,13 @@ namespace SoulSpiral
             hexEdit.Show();
         }
 
+        private void mnuLocalLLM_Click(object sender, EventArgs e)
+        {
+            var f = new frmLocalLLM();
+            f.Icon = this.Icon;
+            f.Show(this);
+        }
+
         protected byte[] sanitizeByteArray(byte[] inArray, byte defaultChar)
         {
             byte[] outArray;
@@ -1099,7 +1174,10 @@ namespace SoulSpiral
 
         #endregion
 
-
+        private void mnuExportUnknownBigfileData_Click(object sender, EventArgs e)
+        {
+            ExportUnknownBigfileData();
+        }
 
     }
 }

@@ -1,27 +1,3 @@
-// BenLincoln.TheLostWorlds.CDBigFile
-// Copyright 2006-2012 Ben Lincoln
-// http://www.thelostworlds.net/
-//
-
-// This file is part of BenLincoln.TheLostWorlds.CDBigFile.
-
-// BenLincoln.TheLostWorlds.CDBigFile is free software: you can redistribute it and/or modify
-// it under the terms of version 3 of the GNU General Public License as published by
-// the Free Software Foundation.
-
-// BenLincoln.TheLostWorlds.CDBigFile is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// You should have received a copy of the GNU General Public License
-// along with BenLincoln.TheLostWorlds.CDBigFile (in the file LICENSE.txt).  
-// If not, see <http://www.gnu.org/licenses/>.
-
-// note: this class is no longer used as of Soul Spiral version 1.5 because Microsoft dropped
-// support for the JET database engine in Windows 7. FlatFileHashLookupTable is used instead.
-// Thanks, Microsoft! No one was using JET databases anyway!
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -130,7 +106,8 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
                 hashReader = hashCommand.ExecuteReader();
                 while (hashReader.Read())
                 {
-                    uint tHashNum = (uint)(hashReader.GetDouble(0));
+                    Double currentVal = hashReader.GetDouble(0);
+                    uint tHashNum = (uint)(currentVal);
                     string tPath = hashReader.GetString(1);
                     mHashTable.Add(tHashNum, tPath);
                 }

@@ -1,9 +1,14 @@
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.dll
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.pdb
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.Data.dll
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.Data.pdb
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.TheLostWorlds.CDBigFile\obj\Debug\BenLincoln.TheLostWorlds.CDBigFile.csprojResolveAssemblyReference.cache
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.TheLostWorlds.CDBigFile\obj\Debug\BenLincoln.TheLostWorlds.CDBigFile.csproj.CoreCompileInputs.cache
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.TheLostWorlds.CDBigFile\obj\Debug\BenLincoln.TheLostWorlds.CDBigFile.csproj.CopyComplete
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.TheLostWorlds.CDBigFile\obj\Debug\BenLincoln.TheLostWorlds.CDBigFile.dll
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.TheLostWorlds.CDBigFile\obj\Debug\BenLincoln.TheLostWorlds.CDBigFile.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.dll
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.Data.dll
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.Data.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\BenLincoln.TheLostWorlds.CDBigFile\obj\Debug\BenLincoln.TheLostWorlds.CDBigFile.csprojResolveAssemblyReference.cache
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\BenLincoln.TheLostWorlds.CDBigFile\obj\Debug\BenLincoln.TheLostWorlds.CDBigFile.dll
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\BenLincoln.TheLostWorlds.CDBigFile\obj\Debug\BenLincoln.TheLostWorlds.CDBigFile.pdb
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.dll
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.TheLostWorlds.CDBigFile.pdb
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.Data.dll
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\BenLincoln.TheLostWorlds.CDBigFile\bin\Debug\BenLincoln.Data.pdb
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\BenLincoln.TheLostWorlds.CDBigFile\obj\Debug\BenLincoln.TheLostWorlds.CDBigFile.csprojResolveAssemblyReference.cache
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\BenLincoln.TheLostWorlds.CDBigFile\obj\Debug\BenLincoln.TheLostWorlds.CDBigFile.dll
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\SoulSpiral\BenLincoln.TheLostWorlds.CDBigFile\obj\Debug\BenLincoln.TheLostWorlds.CDBigFile.pdb

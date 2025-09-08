@@ -1,7 +1,7 @@
-C:\Users\Andrew\source\repos\SoulSpiral-Official\AndrewFradley.HexPanel\bin\Debug\AndrewFradley.HexPanel.dll
-C:\Users\Andrew\source\repos\SoulSpiral-Official\AndrewFradley.HexPanel\bin\Debug\AndrewFradley.HexPanel.pdb
-C:\Users\Andrew\source\repos\SoulSpiral-Official\AndrewFradley.HexPanel\obj\Debug\HexEditor.HexPanel.resources
-C:\Users\Andrew\source\repos\SoulSpiral-Official\AndrewFradley.HexPanel\obj\Debug\AndrewFradley.HexPanel.csproj.GenerateResource.cache
-C:\Users\Andrew\source\repos\SoulSpiral-Official\AndrewFradley.HexPanel\obj\Debug\AndrewFradley.HexPanel.csproj.CoreCompileInputs.cache
-C:\Users\Andrew\source\repos\SoulSpiral-Official\AndrewFradley.HexPanel\obj\Debug\AndrewFradley.HexPanel.dll
-C:\Users\Andrew\source\repos\SoulSpiral-Official\AndrewFradley.HexPanel\obj\Debug\AndrewFradley.HexPanel.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\AndrewFradley.HexPanel\bin\Debug\AndrewFradley.HexPanel.dll
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\AndrewFradley.HexPanel\bin\Debug\AndrewFradley.HexPanel.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\AndrewFradley.HexPanel\obj\Debug\HexEditor.HexPanel.resources
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\AndrewFradley.HexPanel\obj\Debug\AndrewFradley.HexPanel.csproj.GenerateResource.Cache
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\AndrewFradley.HexPanel\obj\Debug\AndrewFradley.HexPanel.dll
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\AndrewFradley.HexPanel\obj\Debug\AndrewFradley.HexPanel.pdb
+E:\Websites\LoK\Andrew\SoulSpiral-AMF\2018-04-04-01\SoulSpiral-AMF-master\SoulSpiral-AMF-master\AndrewFradley.HexPanel\obj\Debug\AndrewFradley.HexPanel.csprojResolveAssemblyReference.cache

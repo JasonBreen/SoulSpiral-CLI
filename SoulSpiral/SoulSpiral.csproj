@@ -10,8 +10,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SoulSpiral</RootNamespace>
     <AssemblyName>SoulSpiral</AssemblyName>
-    <ApplicationIcon>Resources\SoulSpiral-Icon3.ICO</ApplicationIcon>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ApplicationIcon>Uranus Symbol - Icon.ICO</ApplicationIcon>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
@@ -42,6 +42,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DirectoryExporter.cs" />
@@ -63,6 +64,13 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLocalLLM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocalLLM.Designer.cs">
+      <DependentUpon>frmLocalLLM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LlmClient.cs" />
     <Compile Include="frmRecognizedBigfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,31 +157,24 @@
     <None Include="Resources\Decompose-Hover.PNG" />
     <None Include="Resources\DialogueIcons-Small-Question.PNG" />
     <None Include="Resources\Fingerprint.PNG" />
-    <Content Include="Resources\Hashes-BO1.txt" />
-    <Content Include="Resources\Hashes-Defiance.txt" />
-    <Content Include="Resources\Hashes-SR1.txt" />
-    <Content Include="Resources\Hashes-SR2.txt" />
-    <Content Include="Resources\Hashes-SR2_Air_Forge.txt" />
+    <None Include="Resources\Hashes-BO1.txt" />
+    <None Include="Resources\Hashes-Defiance.txt" />
+    <None Include="Resources\Hashes-SR1.txt" />
+    <None Include="Resources\Hashes-SR2.txt" />
+    <None Include="Resources\Hashes-SR2_Air_Forge.txt" />
     <None Include="Resources\Question.PNG" />
     <None Include="Resources\SoulSpiral-Crop.JPG" />
-    <Content Include="Resources\SoulSpiral-Icon3.ICO" />
-    <Content Include="Resources\Uranus Symbol - First Render-Front.ICO" />
-    <Content Include="Resources\Uranus Symbol - Icon.ICO" />
-    <Content Include="Resources\Uranus.ICO" />
+    <None Include="Resources\SoulSpiral-Icon3.ICO" />
+    <None Include="Resources\Uranus Symbol - First Render-Front.ICO" />
+    <None Include="Resources\Uranus Symbol - Icon.ICO" />
+    <None Include="Resources\Uranus.ICO" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Fingerprints.txt" />
-    <Content Include="Resources\Hashes-Akuji.txt" />
-    <Content Include="Resources\Hashes-DisneyRacing.txt" />
-    <Content Include="Resources\Hashes-Gex2.txt" />
-    <Content Include="Resources\Hashes-Gex3.txt" />
-    <Content Include="Resources\Hashes-SR1-DC.txt" />
-    <Content Include="Resources\Hashes-SR1_Proto1.txt" />
+    <Content Include="Uranus Symbol - Icon.ICO" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /d /y "$(ProjectDir)Resources\Hashes-*.txt" "$(TargetDir)"
-xcopy /d /y "$(ProjectDir)Resources\Fingerprints.txt" "$(TargetDir)"</PostBuildEvent>
+    <PostBuildEvent>xcopy /d "$(ProjectDir)Resources\Hashes-*.txt" "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

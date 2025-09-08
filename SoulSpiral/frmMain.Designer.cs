@@ -65,6 +65,7 @@ namespace SoulSpiral
             this.mnuExportDirectory = new System.Windows.Forms.MenuItem();
             this.mnuExportAll = new System.Windows.Forms.MenuItem();
             this.mnuExportIndexData = new System.Windows.Forms.MenuItem();
+            this.mnuExportUnknownBigfileData = new System.Windows.Forms.MenuItem();
             this.mnuImport = new System.Windows.Forms.MenuItem();
             this.mnuReplace = new System.Windows.Forms.MenuItem();
             this.mnuTools = new System.Windows.Forms.MenuItem();
@@ -174,7 +175,8 @@ namespace SoulSpiral
             this.mnuExportCurrent,
             this.mnuExportDirectory,
             this.mnuExportAll,
-            this.mnuExportIndexData});
+            this.mnuExportIndexData,
+            this.mnuExportUnknownBigfileData});
             this.mnuExport.Text = "&Export";
             // 
             // mnuExportCurrent
@@ -201,6 +203,12 @@ namespace SoulSpiral
             this.mnuExportIndexData.Text = "&Raw Index Data";
             this.mnuExportIndexData.Click += new System.EventHandler(this.mnuExportIndexData_Click);
             // 
+            // mnuExportUnknownBigfileData
+            // 
+            this.mnuExportUnknownBigfileData.Index = 4;
+            this.mnuExportUnknownBigfileData.Text = "&Unknown Bigfile Data";
+            this.mnuExportUnknownBigfileData.Click += new System.EventHandler(this.mnuExportUnknownBigfileData_Click);
+            // 
             // mnuImport
             // 
             this.mnuImport.Index = 3;
@@ -219,15 +227,22 @@ namespace SoulSpiral
             this.mnuTools.Index = 4;
             this.mnuTools.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.mnuHexEdit,
-            this.mnuOptions});
+            this.mnuOptions,
+            this.mnuLocalLLM});
             this.mnuTools.Text = "&Tools";
-            this.mnuTools.Visible = false;
+            this.mnuTools.Visible = true;
             // 
             // mnuHexEdit
             // 
             this.mnuHexEdit.Index = 0;
             this.mnuHexEdit.Text = "&Hex Edit Selected File";
             this.mnuHexEdit.Click += new System.EventHandler(this.mnuHexEdit_Click);
+            // 
+            // mnuLocalLLM
+            // 
+            this.mnuLocalLLM.Index = 2;
+            this.mnuLocalLLM.Text = "&Local LLM (GPT-OSS)";
+            this.mnuLocalLLM.Click += new System.EventHandler(this.mnuLocalLLM_Click);
             // 
             // mnuOptions
             // 
@@ -492,9 +507,10 @@ namespace SoulSpiral
         private BenLincoln.UI.HoverImageButton btnHexEdit;
         private System.Windows.Forms.ImageList ilHexEditButton;
         private System.Windows.Forms.MenuItem mnuHexEdit;
+        private System.Windows.Forms.MenuItem mnuLocalLLM;
         private System.Windows.Forms.MenuItem menuItem1;
         private System.Windows.Forms.MenuItem mnuParseNames;
         private System.Windows.Forms.MenuItem mnuAlwaysUseHash;
+        private System.Windows.Forms.MenuItem mnuExportUnknownBigfileData;
     }
 }
-

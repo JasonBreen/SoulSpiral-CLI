@@ -85,7 +85,7 @@ namespace SoulSpiral
             this.lblCreator.Name = "lblCreator";
             this.lblCreator.Size = new System.Drawing.Size(560, 23);
             this.lblCreator.TabIndex = 15;
-            this.lblCreator.Text = "Copyright 2006-2018 Ben Lincoln";
+            this.lblCreator.Text = "Copyright 2006-2022 Ben Lincoln";
             this.lblCreator.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblVersion
@@ -132,7 +132,7 @@ namespace SoulSpiral
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(560, 23);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Additional contributions by Eoghan Driver, and Alexey Kragin";
+            this.label2.Text = "Additional contributions by Alexey Kragin, SolidSnake11, Nex, and Eoghan Driver";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblJohnDoom1

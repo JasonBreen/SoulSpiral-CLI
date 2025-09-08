@@ -1,29 +1,8 @@
-// BenLincoln.TheLostWorlds.CDBigFile
-// Copyright 2006-2012 Ben Lincoln
-// http://www.thelostworlds.net/
-//
-
-// This file is part of BenLincoln.TheLostWorlds.CDBigFile.
-
-// BenLincoln.TheLostWorlds.CDBigFile is free software: you can redistribute it and/or modify
-// it under the terms of version 3 of the GNU General Public License as published by
-// the Free Software Foundation.
-
-// BenLincoln.TheLostWorlds.CDBigFile is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// You should have received a copy of the GNU General Public License
-// along with BenLincoln.TheLostWorlds.CDBigFile (in the file LICENSE.txt).  
-// If not, see <http://www.gnu.org/licenses/>.
-
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using BF = BenLincoln.TheLostWorlds.CDBigFile;
-using BD = BenLincoln.Data;
 
 namespace BenLincoln.TheLostWorlds.CDBigFile
 {
@@ -40,9 +19,7 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
         protected long mOffset;
         //length in the bigfile (NOT uncompressed length for compressed files)
         protected int mLength;
-        protected string mHashedName;
-        protected string mNamePrefix;
-        protected string mNameSuffix;
+        protected uint mHashedName;
         protected BF.Index mParentIndex;
         protected BF.Directory mParentDirectory;
         protected BF.FileType mType;
@@ -152,7 +129,7 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
             }
         }
 
-        public string HashedName
+        public uint HashedName
         {
             get
             {
@@ -161,30 +138,6 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
             set
             {
                 mHashedName = value;
-            }
-        }
-
-        public string NamePrefix
-        {
-            get
-            {
-                return mNamePrefix;
-            }
-            set
-            {
-                mNamePrefix = value;
-            }
-        }
-
-        public string NameSuffix
-        {
-            get
-            {
-                return mNameSuffix;
-            }
-            set
-            {
-                mNameSuffix = value;
             }
         }
 
@@ -251,20 +204,12 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
 
         #endregion
 
-        protected File()
-        {
-
-        }
-
         public File(BF.BigFile parent, BF.Index parentIndex, uint[] rawIndexData, int hashNamePosition, int offsetPosition, int lengthPosition)
         {
-            mNamePrefix = "";
-            mNameSuffix = "";
             mParentBigFile = parent;
             mParentIndex = parentIndex;
             mRawIndexData = rawIndexData;
-            uint rawHash = rawIndexData[hashNamePosition];
-            mHashedName = BD.HexConverter.ByteArrayToHexString(BD.BinaryConverter.UIntToByteArray(rawHash));
+            mHashedName = rawIndexData[hashNamePosition];
             mOffset = rawIndexData[offsetPosition] * mParentIndex.OffsetMultiplier;
             mLength = (int)rawIndexData[lengthPosition];
             CheckFileDataForSanity();
@@ -281,57 +226,13 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
             GetNameComponents();
         }
 
-        public File(BF.BigFile parent, BF.Index parentIndex, uint[] rawIndexData, string hashedName, int offsetPosition, int lengthPosition)
+        public File(BF.BigFile parent, BF.Index parentIndex, uint[] rawIndexData, uint hashedName, int offsetPosition, int lengthPosition)
         {
             mParentBigFile = parent;
             mParentIndex = parentIndex;
             mRawIndexData = rawIndexData;
             mHashedName = hashedName;
             mOffset = rawIndexData[offsetPosition] * mParentIndex.OffsetMultiplier;
-            mLength = (int)rawIndexData[lengthPosition];
-            CheckFileDataForSanity();
-            if (mIsValidReference)
-            {
-                GetHeaderData();
-                mType = GetFileType();
-                mCanBeReplaced = true;
-            }
-            else
-            {
-                mType = BF.FileType.FromType(BF.FileType.FILE_TYPE_Invalid);
-            }
-            GetNameComponents();
-        }
-
-        public File(BF.BigFile parent, BF.Index parentIndex, uint[] rawIndexData, int hashNamePosition, int originPosition, int offsetPosition, int lengthPosition)
-        {
-            mParentBigFile = parent;
-            mParentIndex = parentIndex;
-            mRawIndexData = rawIndexData;
-            mHashedName = BD.HexConverter.ByteArrayToHexString(BD.BinaryConverter.UIntToByteArray(rawIndexData[hashNamePosition]));
-            mOffset = originPosition + (rawIndexData[offsetPosition] * mParentIndex.OffsetMultiplier);
-            mLength = (int)rawIndexData[lengthPosition];
-            CheckFileDataForSanity();
-            if (mIsValidReference)
-            {
-                GetHeaderData();
-                mType = GetFileType();
-                mCanBeReplaced = true;
-            }
-            else
-            {
-                mType = BF.FileType.FromType(BF.FileType.FILE_TYPE_Invalid);
-            }
-            GetNameComponents();
-        }
-
-        public File(BF.BigFile parent, BF.Index parentIndex, uint[] rawIndexData, string hashedName, int originPosition, int offsetPosition, int lengthPosition)
-        {
-            mParentBigFile = parent;
-            mParentIndex = parentIndex;
-            mRawIndexData = rawIndexData;
-            mHashedName = hashedName;
-            mOffset = originPosition + (rawIndexData[offsetPosition] * mParentIndex.OffsetMultiplier);
             mLength = (int)rawIndexData[lengthPosition];
             CheckFileDataForSanity();
             if (mIsValidReference)
@@ -401,7 +302,7 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
             iStream.Close();
         }
 
-        protected virtual void GetNameComponents()
+        protected void GetNameComponents()
         {
             string name = "";
             string path = "";
@@ -453,38 +354,27 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
         protected virtual string GetFileName()
         {
             string name = "";
-            //if (!mIsValidReference)
-            //{
-            //    name = "Invalid-" + string.Format("{0:X8}", mHashedName);
-            //    return name.Trim();
-            //}
+            if (!mIsValidReference)
+            {
+                name = "Invalid-" + string.Format("{0:X8}", mHashedName);
+                return name.Trim();
+            }
             //check the bigfile for a hash table first
             if (mParentBigFile.HashLookupTable != null)
             {
                 name = mParentBigFile.HashLookupTable.LookupHash(mHashedName);
             }
 
-            //if the file type supports it, and the option is enabled read the internal file name
-            if (mParentBigFile.ParseNamesFromKnownFileTypes)
+            //if the file type supports it, read the internal file name
+            if ((name == "") || (name == null))
             {
-                if ((name == "") || (name == null))
-                {
-                    name = mType.GetInternalName(this);
-                }
+                name = mType.GetInternalName(this);
             }
 
             //if the name is still unknown, name it after the hash
             if ((name == "") || (name == null))
             {
                 name = string.Format("{0:X8}", mHashedName);
-            }
-
-            name = string.Format("{0}{1}{2}", NamePrefix, name, NameSuffix);
-
-            if (!mIsValidReference)
-            {
-                name = string.Format("{0}.invalid_bigfile_reference", name);
-                return name.Trim();
             }
 
             return name.Trim();
@@ -526,41 +416,12 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
                 ;
         }
 
-        protected string BytesToASCII(byte[] rawData, string spacer)
-        {
-            StringBuilder builder = new StringBuilder();
-
-            byte[] printable = sanitizeByteArray(rawData, (byte)95);
-            for (int i = 0; i <= printable.GetUpperBound(0); i++)
-            {
-                builder.Append(new string(Encoding.ASCII.GetChars(printable, i, 1)));
-                builder.Append(spacer);
-            }
-            return builder.ToString();
-        }
-
         protected virtual string GetRawIndexInfo()
         {
             string info = "---\r\nRaw Data In Index:\r\n";
             foreach (uint rawData in mRawIndexData)
             {
-                //info += string.Format("Hex: {0:X8} Dec: {0:000000000000}\r\n", rawData);
-
-                uint reversed = BD.EndianConverter.ReverseUInt(rawData);
-
-                info += string.Format("Hex: {0:X8}   Dec: {0:000000000000}   Dec (OE): {1:000000000000}   ASCII: ", rawData, reversed);
-
-                byte[] rdBytes = BitConverter.GetBytes(rawData);
-
-                info += BytesToASCII(rdBytes, "");
-
-                info += "   ASCII (OE): ";
-
-                byte[] rvBytes = BitConverter.GetBytes(reversed);
-
-                info += BytesToASCII(rvBytes, "");
-
-                info += "\r\n";
+                info += string.Format("Hex: {0:X8} Dec: {0:000000000000}\r\n", rawData);
             }
             return info;
         }
@@ -585,12 +446,11 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
             }
             info += "\r\n";
             info += "ASCII: ";
-            //byte[] printable = sanitizeByteArray(mRawHeaderData, (byte)95);
-            //for (int i = 0; i <= printable.GetUpperBound(0); i++)
-            //{
-            //    info += new string(Encoding.ASCII.GetChars(printable, i, 1)) + "    ";
-            //}
-            info += BytesToASCII(mRawHeaderData, "    ");
+            byte[] printable = sanitizeByteArray(mRawHeaderData, (byte)95);
+            for (int i = 0; i <= printable.GetUpperBound(0); i++)
+            {
+                info += new string(Encoding.ASCII.GetChars(printable, i, 1)) + "    ";
+            }
             info += "\r\n";
             return info;
         }

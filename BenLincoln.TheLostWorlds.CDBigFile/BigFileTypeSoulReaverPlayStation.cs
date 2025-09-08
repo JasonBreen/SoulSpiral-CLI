@@ -15,7 +15,7 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
             Name = "SoulReaverPlayStation";
             Description = "Soul Reaver (PlayStation - NTSC - Retail and Beta Versions)";
             MasterIndexType = IndexType.SR1PS1MainIndex;
-            HashLookupTable = new FlatFileHashLookupTable("SR1", Path.Combine(mDLLPath, "Hashes-SR1.txt"));
+            HashLookupTable = new FlatFileHashLookupTable("SR1", Path.Combine(mDLLPath, "Hashes-SR1-PlayStation.txt"));
             FileTypes = new FileType[]
             {
                 BF.FileType.FromType(BF.FileType.FILE_TYPE_DRM_SR1_Object),

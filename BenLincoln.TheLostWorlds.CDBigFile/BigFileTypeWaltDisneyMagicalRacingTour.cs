@@ -33,7 +33,7 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
             : base()
         {
             Name = "DisneyRacing";
-            Description = "Walt Disney Magical Racing Tour (PlayStation)";
+            Description = "Walt Disney World Quest: Magical Racing Tour (PlayStation)";
             MasterIndexType = IndexType.Gex2;
             HashLookupTable = new FlatFileHashLookupTable("DisneyRacing", Path.Combine(mDLLPath, "Hashes-DisneyRacing.txt"));
             FileTypes = new FileType[]

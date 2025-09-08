@@ -1,23 +1,3 @@
-// BenLincoln.TheLostWorlds.CDBigFile
-// Copyright 2006-2012 Ben Lincoln
-// http://www.thelostworlds.net/
-//
-
-// This file is part of BenLincoln.TheLostWorlds.CDBigFile.
-
-// BenLincoln.TheLostWorlds.CDBigFile is free software: you can redistribute it and/or modify
-// it under the terms of version 3 of the GNU General Public License as published by
-// the Free Software Foundation.
-
-// BenLincoln.TheLostWorlds.CDBigFile is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-
-// You should have received a copy of the GNU General Public License
-// along with BenLincoln.TheLostWorlds.CDBigFile (in the file LICENSE.txt).  
-// If not, see <http://www.gnu.org/licenses/>.
-
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -64,14 +44,8 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
         public const int FILE_TYPE_STR_SR2_PC = 30;
         public const int FILE_TYPE_CRM_SR1 = 28;
         public const int FILE_TYPE_RAW_SR2_PS2 = 32;
-        public const int FILE_TYPE_DRM_SR2_Object = 33;
-        public const int FILE_TYPE_DRM_SR2_Room_RETAIL = 34;
-        public const int FILE_TYPE_DRM_SR2_Room_DEMO_NTSC = 35;
-        public const int FILE_TYPE_DRM_SR2_Room_DEMO_PAL = 36;
-        public const int FILE_TYPE_DDS = 37;
-        public const int FILE_TYPE_PlayStation_SEQ = 38;
-        public const int FILE_TYPE_VAG = 39;
-        public const int FILE_TYPE_VAB = 40;
+        public const int FILE_TYPE_SHA_BO1 = 33;
+        public const int FILE_TYPE_SHD_BO1 = 34;
 
         #region Properties
 
@@ -330,22 +304,6 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
                     ftVABH.Header = new byte[] { 0x56, 0x41, 0x47, 0x70 };
                     return ftVABH;
                     break;
-                case FILE_TYPE_VAG:
-                    FileTypeWithFixedHeader ftVAG = new FileTypeWithFixedHeader();
-                    ftVAG.Name = "VAG Audio File";
-                    ftVAG.Description = "A standard Playstation sound file";
-                    ftVAG.FileExtension = "vag";
-                    ftVAG.Header = new byte[] { 0x70, 0x47, 0x42, 0x56 };
-                    return ftVAG;
-                    break;
-                case FILE_TYPE_VAB:
-                    FileTypeWithFixedHeader ftVAB = new FileTypeWithFixedHeader();
-                    ftVAB.Name = "VAB Audio File";
-                    ftVAB.Description = "A standard Playstation sound library file";
-                    ftVAB.FileExtension = "vab";
-                    ftVAB.Header = new byte[] { 0x70, 0x42, 0x41, 0x56 };
-                    return ftVAB;
-                    break;
                 case FILE_TYPE_DRM_SR2:
                     FileTypeWithFixedHeader ftDRMSR2 = new FileTypeWithFixedHeader();
                     ftDRMSR2.Name = "DRM (Soul Reaver 2)";
@@ -395,63 +353,23 @@ namespace BenLincoln.TheLostWorlds.CDBigFile
                     ftRAWSR2PS2.Header = new byte[] { 0x21, 0x57, 0x41, 0x52 };
                     return ftRAWSR2PS2;
                     break;
-                case FILE_TYPE_DRM_SR2_Room_RETAIL:
-                    FileTypeWithInterlacedPointerData ftDRMSR2RoomRetail = new FileTypeWithInterlacedPointerData();
-                    ftDRMSR2RoomRetail.Name = "DRM - Room (Soul Reaver 2)";
-                    ftDRMSR2RoomRetail.Description = "A room definition from Soul Reaver 2";
-                    ftDRMSR2RoomRetail.FileExtension = "drm";
-                    ftDRMSR2RoomRetail.Header = new byte[] { 0x1D, 0x04, 0xC2, 0x04 }; // Retail
-                    ftDRMSR2RoomRetail.HeaderOffset = 0x84;
-                    ftDRMSR2RoomRetail.NamePointerOffset = 0x54;
-                    return ftDRMSR2RoomRetail;
+                case FILE_TYPE_SHA_BO1:
+                    FileTypeWithFixedHeader ftSHABO1 = new FileTypeWithFixedHeader();
+                    ftSHABO1.Name = "SHA";
+                    ftSHABO1.Description = "Character Data";
+                    ftSHABO1.FileExtension = "SHA";
+                    ftSHABO1.Header = new byte[] { 0xF8, 0xF8, 0xF8, 0xF8, 0xF8, 0xF8, 0xF8, 0xF8 };
+                    ftSHABO1.HeaderOffset = 992;
+                    return ftSHABO1;
                     break;
-                case FILE_TYPE_DRM_SR2_Room_DEMO_NTSC:
-                    FileTypeWithInterlacedPointerData ftDRMSR2RoomDemoNTSC = new FileTypeWithInterlacedPointerData();
-                    ftDRMSR2RoomDemoNTSC.Name = "DRM - Room (Soul Reaver 2)";
-                    ftDRMSR2RoomDemoNTSC.Description = "A room definition from Soul Reaver 2";
-                    ftDRMSR2RoomDemoNTSC.FileExtension = "drm";
-                    ftDRMSR2RoomDemoNTSC.Header = new byte[] { 0x72, 0x41, 0x20, 0x4C }; // NTSC Demo
-                    ftDRMSR2RoomDemoNTSC.HeaderOffset = 0x84;
-                    ftDRMSR2RoomDemoNTSC.NamePointerOffset = 0x54;
-                    return ftDRMSR2RoomDemoNTSC;
-                    break;
-                case FILE_TYPE_DRM_SR2_Room_DEMO_PAL:
-                    FileTypeWithInterlacedPointerData ftDRMSR2RoomDemoPAL = new FileTypeWithInterlacedPointerData();
-                    ftDRMSR2RoomDemoPAL.Name = "DRM - Room (Soul Reaver 2)";
-                    ftDRMSR2RoomDemoPAL.Description = "A room definition from Soul Reaver 2";
-                    ftDRMSR2RoomDemoPAL.FileExtension = "drm";
-                    ftDRMSR2RoomDemoPAL.Header = new byte[] { 0x19, 0x04, 0xC2, 0x04 }; // PAL Demo
-                    ftDRMSR2RoomDemoPAL.HeaderOffset = 0x84;
-                    ftDRMSR2RoomDemoPAL.NamePointerOffset = 0x54;
-                    return ftDRMSR2RoomDemoPAL;
-                    break;
-                case FILE_TYPE_DRM_SR2_Object:
-                    FileTypeWithInterlacedPointerData ftDRMSR2Object = new FileTypeWithInterlacedPointerData();
-                    ftDRMSR2Object.Name = "DRM - Object (Soul Reaver 2)";
-                    ftDRMSR2Object.Description = "An object definition from Soul Reaver 2";
-                    ftDRMSR2Object.FileExtension = "drm";
-                    ftDRMSR2Object.Header = new byte[] { 0xA0, 0x0F, 0x10, 0x27, 0x70, 0x17, 0xE0, 0x2E };
-                    ftDRMSR2Object.HeaderOffset = 0x1C;
-                    ftDRMSR2Object.NamePointerOffset = 0x2C;
-                    return ftDRMSR2Object;
-                    break;
-                case FILE_TYPE_DDS:
-                    FileTypeWithFixedHeader ftDirectDrawSurface = new FileTypeWithFixedHeader();
-                    ftDirectDrawSurface.Name = "DDS - Direct Draw Surface";
-                    ftDirectDrawSurface.Description = "A texture file";
-                    ftDirectDrawSurface.FileExtension = "dds";
-                    ftDirectDrawSurface.Header = new byte[] { 0x44, 0x44, 0x53, 0x20 };
-                    ftDirectDrawSurface.HeaderOffset = 0;
-                    return ftDirectDrawSurface;
-                    break;
-                case FILE_TYPE_PlayStation_SEQ:
-                    FileTypeWithFixedHeader ftPlayStationSEQ = new FileTypeWithFixedHeader();
-                    ftPlayStationSEQ.Name = "SEQ - PlayStation Audio Sequence File";
-                    ftPlayStationSEQ.Description = "An audio sequence";
-                    ftPlayStationSEQ.FileExtension = "seq";
-                    ftPlayStationSEQ.Header = new byte[] { 0x70, 0x51, 0x45, 0x53 };
-                    ftPlayStationSEQ.HeaderOffset = 0;
-                    return ftPlayStationSEQ;
+                case FILE_TYPE_SHD_BO1:
+                    FileTypeWithFixedHeader ftSHDBO1 = new FileTypeWithFixedHeader();
+                    ftSHDBO1.Name = "SHD";
+                    ftSHDBO1.Description = "Item Data";
+                    ftSHDBO1.FileExtension = "SHD";
+                    ftSHDBO1.Header = new byte[] { 0xF8, 0xF8, 0xF8, 0xF8, 0xF8, 0xF8, 0xF8, 0xF8 };
+                    ftSHDBO1.HeaderOffset = 96;
+                    return ftSHDBO1;
                     break;
                 default:
                     return new FileType();

@@ -1,10 +1,18 @@
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.UI\bin\x86\Debug\BenLincoln.UI.dll
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.UI\bin\x86\Debug\BenLincoln.UI.pdb
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.Dialogue.resources
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.NotificationDialogue.resources
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.ProgressWindow.resources
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.Properties.Resources.resources
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.csproj.GenerateResource.cache
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.csproj.CoreCompileInputs.cache
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.dll
-C:\Users\Andrew\source\repos\SoulSpiral-Official\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.pdb
+E:\Websites\LoK\Andrew\Only Skin Deep-01\Source\BenLincoln.UI\bin\x86\Debug\BenLincoln.UI.dll
+E:\Websites\LoK\Andrew\Only Skin Deep-01\Source\BenLincoln.UI\bin\x86\Debug\BenLincoln.UI.pdb
+E:\Websites\LoK\Andrew\Only Skin Deep-01\Source\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.Dialogue.resources
+E:\Websites\LoK\Andrew\Only Skin Deep-01\Source\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.NotificationDialogue.resources
+E:\Websites\LoK\Andrew\Only Skin Deep-01\Source\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.ProgressWindow.resources
+E:\Websites\LoK\Andrew\Only Skin Deep-01\Source\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.Properties.Resources.resources
+E:\Websites\LoK\Andrew\Only Skin Deep-01\Source\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.csproj.GenerateResource.Cache
+E:\Websites\LoK\Andrew\Only Skin Deep-01\Source\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.dll
+E:\Websites\LoK\Andrew\Only Skin Deep-01\Source\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.pdb
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\BenLincoln.UI\bin\x86\Debug\BenLincoln.UI.dll
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\BenLincoln.UI\bin\x86\Debug\BenLincoln.UI.pdb
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.Dialogue.resources
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.NotificationDialogue.resources
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.ProgressWindow.resources
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.Properties.Resources.resources
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.csproj.GenerateResource.Cache
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.dll
+C:\Users\blincoln\Documents\Visual Studio 2005\Projects\BenLincoln.UI\obj\x86\Debug\BenLincoln.UI.pdb
